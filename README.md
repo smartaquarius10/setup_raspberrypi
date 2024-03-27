@@ -1,3 +1,5 @@
+## Steps to enable remote login from windows when ubuntu is installed on raspberry pi
+
 ### [xrdp stuck after inserting password](https://github.com/neutrinolabs/xrdp/issues/1795)
 
 ```
@@ -7,7 +9,7 @@ sudo systemctl isolate graphical
 ```
 
 ### [Install firefox-esr](https://askubuntu.com/questions/1406527/why-doesnt-ubuntu-provide-firefox-esr-in-its-repositories)
-
+Snap firefox doesn't run on raspberry pi. 
 ```
 sudo snap remove firefox
 
@@ -29,6 +31,9 @@ sudo apt install firefox-esr
 ### Haproxy
 User haproxy xfg if need to manage raspberry pi at port 80
 
+## Steps to enable auto mount harddisk. 
+We can use fstab but it creates problem in the startup if harddisk is not connected
+
 ### Mount harddisk
 - [refer this for different options](https://www.squash.io/executing-bash-script-at-startup-in-ubuntu-linux/)
  ```
@@ -38,6 +43,7 @@ For eg. # cat /etc/rc.local
 /home/pi/script/mountdisk.sh
 exit 0
 ```
+## Steps to host local media server
 
 ### Docker compose
 - Host jellyfin
