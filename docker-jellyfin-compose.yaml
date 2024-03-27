@@ -1,0 +1,30 @@
+version: "2"
+services:
+  elb:
+    image: haproxy
+    ports:
+      - "80:80"
+    volumes:
+      - "./haproxy:/usr/local/etc/haproxy"
+    restart: always
+#    networks:
+#      - web
+#      - no-internet
+#    network_mode: host
+
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    volumes:
+#      - ./config:/config
+ #     - ./cache:/cache
+      - /media/jellyfin/movies:/movies
+    environment:
+      - PUID=1000
+      - PGID=1000
+    restart: unless-stopped
+    ports:
+      - 8096:8096
+    cap_drop:
+      - NET_RAW
+      - NET_ADMIN
