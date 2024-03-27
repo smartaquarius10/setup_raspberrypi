@@ -32,7 +32,7 @@ User haproxy xfg if need to manage raspberry pi at port 80
 ### Mount harddisk
 - [refer this for different options](https://www.squash.io/executing-bash-script-at-startup-in-ubuntu-linux/)
  ```
-Foreg. # cat /etc/rc.local
+For eg. # cat /etc/rc.local
 
 #!/bin/sh -e
 /home/pi/script/mountdisk.sh
