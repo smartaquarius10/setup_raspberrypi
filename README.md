@@ -28,9 +28,6 @@ sudo apt install firefox-esr
 - Add .xsession and .xsessionrc in the home directory of user
 - Copy startwm.sh to /etc/xrdp
 
-### Haproxy
-User haproxy xfg if need to manage raspberry pi at port 80
-
 ## Steps to enable auto mount harddisk. 
 We can use fstab but it creates problem in the startup if harddisk is not connected
 
@@ -44,6 +41,9 @@ For eg. # cat /etc/rc.local
 exit 0
 ```
 ## Steps to host local media server
+
+### Haproxy
+User haproxy xfg if need to manage raspberry pi at port 80
 
 ### Docker compose
 - Host jellyfin
