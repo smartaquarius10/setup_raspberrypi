@@ -1,4 +1,4 @@
-## Steps to enable remote login from windows when ubuntu is installed on raspberry pi
+## Enable remote login from windows when ubuntu is installed on raspberry pi
 
 ### [xrdp stuck after inserting password](https://github.com/neutrinolabs/xrdp/issues/1795)
 
