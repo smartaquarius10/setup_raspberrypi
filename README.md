@@ -27,7 +27,15 @@ sudo apt install firefox-esr
 ### File management
 - Add .xsession and .xsessionrc in the home directory of user
 - Copy startwm.sh to /etc/xrdp
+  
+### Enable auto login for user
+```
+# sudo nano /etc/gdm3/custom.conf
+AutomaticLoginEnable=True
+AutomaticLogin=<specify login user id for eg. pi>
 
+```
+``` # sudo service xrdp restart```
 ## Steps to enable auto mount harddisk. 
 We can use fstab but it creates problem in the startup if harddisk is not connected
 
