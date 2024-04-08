@@ -37,6 +37,8 @@ AutomaticLogin=<specify login user id for eg. pi>
 ```
 ``` # sudo service xrdp restart```
 ## Steps to enable auto mount harddisk. 
+<i>Rest of the details are optional. </i>
+
 We can use fstab but it creates problem in the startup if harddisk is not connected
 
 ### Mount harddisk
