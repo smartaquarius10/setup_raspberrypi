@@ -90,3 +90,24 @@ And run command to remove the Ubuntu PPA:
 ```
 sudo add-apt-repository --remove ppa:mozillateam/ppa
 ```
+### Mount service for hdd
+
+Create service 
+```
+sudo nano /etc/systemd/system/mount-jellyfin.service
+```
+#### If mount directory is a volume in docker
+
+Add this
+```
+[Unit]
+After=mount-jellyfin-hdd.service
+Requires=mount-jellyfin-hdd.service
+```
+
+Now execute theses commands
+```
+sudo systemctl daemon-reload
+sudo systemctl enable mount-jellyfin
+sudo systemctl enable docker
+```
