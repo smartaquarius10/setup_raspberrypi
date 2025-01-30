@@ -1,0 +1,16 @@
+[Unit]
+Description=Mount External Jellyfin  Hard Disk
+After=multi-user.target dev-sda1.device
+Wants=dev-sda1.device
+Before=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/mount -t exfat -o rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,iocharset=utf8,errors=remount-ro,uhelper=udisks2 /dev/sda1 /media/jellyfin
+ExecStop=/bin/umount /media/jellyfin
+RemainAfterExit=true
+TimeoutSec=10
+SuccessExitStatus=0 32
+
+[Install]
+WantedBy=multi-user.target
